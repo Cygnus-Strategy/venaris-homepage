@@ -606,20 +606,12 @@ img {
 
 .footer-social {
     margin-bottom: var(--spacing-md);
-    display: block;
-    text-align: center;
-    min-height: 2rem;
 }
 
 .footer-social a {
-    color: var(--color-orange);
-    font-size: 1.5rem;
-    display: inline-block;
-    margin: 0 0.5rem;
-    position: relative;
-    z-index: 1000;
-    background-color: yellow;
-    padding: 1rem;
+    color: var(--color-gray);
+    margin: 0 var(--spacing-sm);
+    font-size: 0.9rem;
 }
 
 .footer-social a:hover {
@@ -631,7 +623,6 @@ img {
     font-size: 1.5rem;
     color: var(--color-orange);
     margin-bottom: var(--spacing-sm);
-    margin-top: var(--spacing-sm);
 }
 
 .copyright {

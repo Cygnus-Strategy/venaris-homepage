@@ -1,8 +1,6 @@
 // Venaris - Main JavaScript
 
-(function () {
-  "use strict";
-
+(() => {
   // Mobile Navigation Toggle
   const navToggle = document.querySelector(".nav-toggle");
   const navLinks = document.querySelector(".nav-links");
@@ -16,8 +14,8 @@
     });
 
     // Close menu when clicking a link
-    navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
         navLinks.classList.remove("active");
         navToggle.classList.remove("active");
       });
@@ -25,8 +23,8 @@
   }
 
   // Close mobile menu when clicking outside
-  document.addEventListener("click", function (event) {
-    if (navLinks && navLinks.classList.contains("active")) {
+  document.addEventListener("click", (event) => {
+    if (navLinks?.classList.contains("active")) {
       if (!event.target.closest(".nav")) {
         navLinks.classList.remove("active");
         navToggle.classList.remove("active");
@@ -35,7 +33,7 @@
   });
 
   // Smooth scroll for anchor links (if any)
-  document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const targetId = this.getAttribute("href");
       if (targetId !== "#") {
@@ -54,7 +52,7 @@
   // Add header background on scroll (optional enhancement)
   const header = document.querySelector(".header");
   if (header) {
-    window.addEventListener("scroll", function () {
+    window.addEventListener("scroll", () => {
       if (window.scrollY > 50) {
         header.classList.add("scrolled");
       } else {
